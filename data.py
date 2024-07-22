@@ -10,7 +10,7 @@ st.title('Data Analysis Application 📊🚀')
 st.subheader('This is Simple Data Analysis Application create by Muhammad Aqeel 😊 🤖✨')
 
 #craete a dropdown list to choosen a dataset
-dataset_option = ['iris', 'titanic', 'tips', 'diamond']
+dataset_option = ['iris', 'titanic', 'tips']
 selected_dataset = st.selectbox('Select a dataset ', dataset_option)
 
 #load the selected data
@@ -20,8 +20,7 @@ elif selected_dataset =='titanic':
     df= sns.load_dataset('titanic')
 elif selected_dataset == 'tips':
     df= sns.load_dataset('tips')   
-elif selected_dataset =='diamond':
-    df =sns.load_dataset('diamond')
+ 
 
 #upload the file 
 uploaded_file = st.file_uploader('upload the custom data', type=('csv', 'xlsx'))        
